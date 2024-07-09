@@ -1,0 +1,10 @@
+<p>blog-detail-view works!</p>
+
+<a (click)="goToBlogsPage()" style="color: blue; cursor: pointer;">Back to blogs page</a>
+
+<div>
+  <p>Blog id: {{ blogId }}</p>
+  <p>
+    name: {{ (blogDetail$ | async )?.name}}
+  </p>
+</div>
