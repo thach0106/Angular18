@@ -4,7 +4,7 @@ steps:
     args:
       - 'build'
       - '-t'
-      - '$LOCATION-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}:${SHORT_SHA}'
+      - $LOCATION-docker.pkg.dev/${PROJECT_ID}/$LOCATION/${REPO_NAME}:${SHORT_SHA}'
       - '--build-arg'
       - 'APP_ENV=${_APP_ENV}'
       - '.'
@@ -13,7 +13,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - '$LOCATION-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}:${SHORT_SHA}'
+      - $LOCATION-docker.pkg.dev/${PROJECT_ID}/$LOCATION/${REPO_NAME}:${SHORT_SHA}'
 
   # Deploy container image to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
@@ -21,14 +21,14 @@ steps:
       - 'run'
       - 'deploy'
       - '${REPO_NAME}'
-      - '--image=$LOCATION-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}:${SHORT_SHA}'
+      - '--image$LOCATION-docker.pkg.dev/${PROJECT_ID}/$LOCATION/${REPO_NAME}:${SHORT_SHA}'
       - '--region=$LOCATION'
       - '--platform=managed'
       - '--ingress=all'
       - '--allow-unauthenticated'
 
 images:
-  - '$LOCATION-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}'
+  - $LOCATION-docker.pkg.dev/${PROJECT_ID}/$LOCATION/${REPO_NAME}'
 
 options:
   logging: CLOUD_LOGGING_ONLY
