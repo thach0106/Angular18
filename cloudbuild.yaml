@@ -27,9 +27,6 @@ steps:
       - '--ingress=all'
       - '--allow-unauthenticated'
 
-images:
-  - $LOCATION-docker.pkg.dev/${PROJECT_ID}/$LOCATION/${REPO_NAME}'
-
 options:
   logging: CLOUD_LOGGING_ONLY
 
