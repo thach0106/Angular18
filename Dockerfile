@@ -12,5 +12,5 @@ RUN npm run build:$APP_ENV
 EXPOSE 8080
 
 FROM nginx
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/app.conf
+COPY --from=build /app/dist/routing-path-app/browser /usr/share/nginx/html
