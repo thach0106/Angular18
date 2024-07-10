@@ -20,7 +20,7 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - '${REPO_NAME}'
+      - 'angular18'
       - '--image=asia-east1-docker.pkg.dev/test-deploy-cloud-run-429003/asia-east1/angular18-img:${SHORT_SHA}'
       - '--region=$LOCATION'
       - '--platform=managed'
