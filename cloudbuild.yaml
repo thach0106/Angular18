@@ -4,7 +4,7 @@ steps:
     args:
       - 'build'
       - '-t'
-      -  asia-east1-docker.pkg.dev/test-deploy-cloud-run-429003/asia-east1/angular18-img:${SHORT_SHA}'
+      -  'asia-east1-docker.pkg.dev/test-deploy-cloud-run-429003/asia-east1/angular18-img:${SHORT_SHA}'
       - '--build-arg'
       - 'APP_ENV=${_APP_ENV}'
       - '.'
@@ -13,7 +13,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      -  asia-east1-docker.pkg.dev/test-deploy-cloud-run-429003/asia-east1/angular18-img:${SHORT_SHA}'
+      -  'asia-east1-docker.pkg.dev/test-deploy-cloud-run-429003/asia-east1/angular18-img:${SHORT_SHA}'
 
   # Deploy container image to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
