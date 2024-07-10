@@ -5,8 +5,8 @@ steps:
       - 'build'
       - '-t'
       - $LOCATION-docker.pkg.dev/${PROJECT_ID}/$LOCATION/angular18-img:${SHORT_SHA}'
-      - '--build-arg'
-      - 'APP_ENV=${_APP_ENV}'
+      # - '--build-arg'
+      # - 'APP_ENV=${_APP_ENV}'
       - '.'
 
   # Push the container image to Artifact Registry

@@ -1,6 +1,6 @@
 FROM node:20 as build
 WORKDIR /app
-ARG APP_ENV
+ARG APP_ENV=prd
 
 COPY ./package*.json ./
 RUN npm ci
