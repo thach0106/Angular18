@@ -7,8 +7,8 @@ import { DefaultLayoutComponent } from '../shared/layout/default-layout/default-
   standalone: true,
   imports: [RouterOutlet, DefaultLayoutComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'routing-path-app';
+  title = 'angular-template-app';
 }

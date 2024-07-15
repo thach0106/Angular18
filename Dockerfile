@@ -13,4 +13,4 @@ EXPOSE 8080
 
 FROM nginx
 COPY nginx.conf /etc/nginx/conf.d/app.conf
-COPY --from=build /app/dist/routing-path-app/browser /usr/share/nginx/html
+COPY --from=build /app/dist/angular-template-app/browser /usr/share/nginx/html

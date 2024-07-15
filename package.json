@@ -1,7 +1,8 @@
 {
-  "name": "routing-path-app",
+  "name": "angular-template-app",
   "version": "0.0.0",
   "type": "module",
+  "description": "Angular app version 18. Node-version >= 20.15.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
